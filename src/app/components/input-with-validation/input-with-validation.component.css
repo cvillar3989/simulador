@@ -1,0 +1,22 @@
+mat-form-field {
+    width: 35%;
+}
+
+.msn-error {
+    width: 31.3%;
+    height: 23px;
+    padding: 15px 20px;
+    background-color: #febdb9;
+    margin-top: -20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 0.75rem;
+    white-space: nowrap;
+}
+
+mat-label {
+    font-size: 14px;
+    color: #68707E;
+}
+
+/*transform: translateY(-0.7em) scale(.75);*/

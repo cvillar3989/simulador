@@ -1,0 +1,11 @@
+<form id="authorization-form" [formGroup]="loginFormGroup" (ngSubmit)="authenticate()">
+    <div class="title">
+        <label>Por favor introduce tu usuario de acceso:</label>
+    </div>
+    <app-input-with-validation [fControl]="userFormControl" typeInput="text" label="Usuario">
+    </app-input-with-validation>
+    <app-input-with-validation [fControl]="passFormControl" typeInput="password" label="Contraseña">
+    </app-input-with-validation>
+
+    <app-button-bar-cancel-and-continue [formGroup]="loginFormGroup"></app-button-bar-cancel-and-continue>
+</form>

@@ -1,0 +1,10 @@
+mat-toolbar div {
+    font-size: 12px;
+    color: #68707E;
+    text-transform: uppercase !important;
+}
+
+mat-toolbar {
+    border-top: 1px solid #eaefef;
+    background-color: #f5f6fa;
+}

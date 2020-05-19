@@ -1,0 +1,4 @@
+<div class="title">{{titleText}}</div>
+<app-input-with-validation [fControl]="fControl" [label]="label" [typeInput]="typeInput">
+</app-input-with-validation>
+<a *ngIf="linkText !== undefined" mat-button (click)="onClickLink()">{{linkText}}</a>

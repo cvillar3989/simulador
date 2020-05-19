@@ -1,9 +1,28 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
-
+const nrbe = '0128';
 export const environment = {
-  production: false
+  production: false,
+  redirectUrlSCA: 'https://hub-i.redsys.es:16443/asp-sim-sb/services/rest/mock-ups/sca/callback',
+  redirectURL: 'https://hub-i.redsys.es:16443/asp-sim-sb/services/rest/mock-ups/authorization/callback',
+  endpointAuth: 'https://hub-i.redsys.es:16443/asp-sim-sb/services/rest/mock-ups/authorization/login',
+  contextApp: '',
+  nrbe: nrbe,
+  endpoints: { 
+    getPaymentsSCA: `assets/json/InformationByConfirmationPaymentsSCAResponse.json`,
+    //getPaymentsSCA: `https://hub-i.redsys.es:16443/asp-sim-sb/services/rest/mock-ups/sca/${nrbe}/payments`
+    putPaymentsSCA: `https://hub-i.redsys.es:16443/asp-sim-sb/services/rest/mock-ups/sca/${nrbe}/payments`,
+    //getConsentsSCAAccounts: `https://hub-i.redsys.es:16443/asp-sim-sb/services/rest/mock-ups/sca/${nrbe}/consents`,
+    getConsentsSCAAccounts: `assets/json/AccountsResponse.json`,
+    //postConsentsSCAOTP: `https://hub-i.redsys.es:16443/asp-sim-sb/services/rest/mock-ups/sca/${nrbe}/validation`
+    postConsentsSCAOTP: `assets/json/OTPResponse.json`,
+    putConsentsSCA: `https://hub-i.redsys.es:16443/asp-sim-sb/services/rest/mock-ups/sca/${nrbe}/consents`
+  },
+  headers: {
+    ASPSPSimulatorSession: 'ASPSP-Simulator-Session'
+  }
+  
 };
 
 /*

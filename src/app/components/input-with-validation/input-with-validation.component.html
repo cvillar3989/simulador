@@ -1,0 +1,9 @@
+<div>
+    <mat-form-field appearance="outline">
+        <mat-label>{{label}}</mat-label>
+        <input [formControl]="fControl" [type]="typeInput" matInput placeholder="">
+    </mat-form-field>
+    <div *ngIf="(!fControl.valid) && fControl.touched" class="msn-error">
+        Es obligatorio rellenar el campo
+    </div>
+</div>

@@ -1,0 +1,13 @@
+mat-card {
+    background-color: #f3f5f5;
+    width: 50%;
+    margin-bottom: 25px;
+}
+
+tr {
+    height: 35px;
+}
+.value{
+    font-weight: bold;
+    padding-left: 70px;
+}

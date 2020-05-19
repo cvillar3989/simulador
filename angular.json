@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "simulador"
+    }
+  },
+  "defaultProject": "simulador",
+  "cli": {
+    "analytics": "132b6c63-5de9-4c1c-89c6-c509c507151e"
+  }
 }

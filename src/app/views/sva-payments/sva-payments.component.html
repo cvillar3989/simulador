@@ -1,0 +1,59 @@
+<form id="payments-form" [formGroup]="paymentsFormGroup" (ngSubmit)="sendPayments()">
+    <div class="title">
+        <label>Para ejecutar esta operación necesitamos confirmar la siguiente información.</label>
+    </div>
+    <mat-card>
+        <mat-card-content>
+            <table *ngIf="informationByConfirmationPaymentsSCA !== undefined">
+                <tr>
+                    <td>Importe</td>
+                    <td class="value">{{informationByConfirmationPaymentsSCA.instructedAmount.amount | currency:informationByConfirmationPaymentsSCA.instructedAmount.currency}}</td>
+                </tr>
+                <tr>
+                    <td>Cuenta de Origen</td>
+                    <td class="value">{{informationByConfirmationPaymentsSCA.debtorAccount.iban | hideCenterAccount}}</td>
+                </tr>
+                <tr>
+                    <td>Cuenta de Destino</td>
+                    <td class="value">{{informationByConfirmationPaymentsSCA.creditorAccount.iban | hideCenterAccount}}</td>
+                </tr>
+                <tr *ngIf="informationByConfirmationPaymentsSCA.creditorAgent !== undefined">
+                    <td>BIC de la cuenta del beneficiario</td>
+                    <td class="value">{{informationByConfirmationPaymentsSCA.creditorAgent}}</td>
+                </tr>
+                <tr *ngIf="informationByConfirmationPaymentsSCA.creditorName !== undefined">
+                    <td>Beneficiario</td>
+                    <td class="value">{{informationByConfirmationPaymentsSCA.creditorName}}</td>
+                </tr>
+                <tr *ngIf="informationByConfirmationPaymentsSCA.comition !== undefined">
+                    <td>Comision</td>
+                    <td class="value">{{informationByConfirmationPaymentsSCA.comition}}</td>
+                </tr>
+                <tr *ngIf="informationByConfirmationPaymentsSCA.chargeBearer !== undefined">
+                    <td>Charge Bearer</td>
+                    <td class="value">{{informationByConfirmationPaymentsSCA.chargeBearer}}</td>
+                </tr>
+                <tr *ngIf="informationByConfirmationPaymentsSCA.remittanceInformationUnstructured !== undefined">
+                    <td>Información adicional</td>
+                    <td class="value">{{informationByConfirmationPaymentsSCA.remittanceInformationUnstructured}}</td>
+                </tr>
+                <tr *ngIf="informationByConfirmationPaymentsSCA.requestedExecutionDate !== undefined">
+                    <td>Fecha de ejecución</td>
+                    <td class="value">{{informationByConfirmationPaymentsSCA.requestedExecutionDate}}</td>
+                </tr>
+                <tr *ngIf="informationByConfirmationPaymentsSCA.requestedExecutionTime !== undefined">
+                    <td>Fecha/hora de ejecución</td>
+                    <td class="value">{{informationByConfirmationPaymentsSCA.requestedExecutionTime}}</td>
+                </tr>
+            </table>
+        </mat-card-content>
+    </mat-card>
+    <app-input-with-valid-title-and-link [fControl]="coordinatesFormControl" label="Introduce la coordenada [I-8]" typeInput="number"
+        titleText="Introduce las siguientes coordenadas de la tarjeta con numero 9999999999" >
+    </app-input-with-valid-title-and-link>
+    <app-input-with-valid-title-and-link [fControl]="codeFormControl" label="Introducir clave" typeInput="text"
+        titleText="Debe introducir la clave de 6 caracteres que hemos enviado a tu movil xxxxxx000"
+        linkText="Reenviar Clave" >
+    </app-input-with-valid-title-and-link>
+    <app-button-bar-cancel-and-continue [formGroup]="paymentsFormGroup"></app-button-bar-cancel-and-continue>
+</form>

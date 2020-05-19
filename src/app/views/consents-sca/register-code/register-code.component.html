@@ -1,0 +1,7 @@
+<form id="register-code-form" [formGroup]="registerCodeFormGroup" (ngSubmit)="validCode()">
+    <app-input-with-valid-title-and-link [fControl]="codeFormControl" label="Introducir clave" typeInput="text"
+        titleText="Debe introducir la clave de 6 caracteres que hemos enviado a tu movil xxxxxx000"
+        linkText="Reenviar Clave">
+    </app-input-with-valid-title-and-link>
+    <app-button-bar-cancel-and-continue [formGroup]="registerCodeFormGroup"></app-button-bar-cancel-and-continue>
+</form>
