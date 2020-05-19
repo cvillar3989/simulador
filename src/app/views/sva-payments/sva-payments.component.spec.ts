@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PaymentsSCAComponent } from './payments-sca.component';
+import { SVAPaymentsComponent } from './sva-payments.component';
 
-describe('PaymentsSCAComponent', () => {
-  let component: PaymentsSCAComponent;
-  let fixture: ComponentFixture<PaymentsSCAComponent>;
+describe('SVAPaymentsComponent', () => {
+  let component: SVAPaymentsComponent;
+  let fixture: ComponentFixture<SVAPaymentsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PaymentsSCAComponent ]
+      declarations: [ SVAPaymentsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PaymentsSCAComponent);
+    fixture = TestBed.createComponent(SVAPaymentsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
