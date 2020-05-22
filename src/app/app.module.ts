@@ -22,7 +22,9 @@ import { SelectAccountComponent } from './views/consents-sca/select-account/sele
 import { InputWithValidTitleAndLinkComponent } from './components/input-with-valid-title-and-link/input-with-valid-title-and-link.component';
 import { HideCenterAccountPipe } from './pipes/hide-center-account.pipe';
 import { DateTextPipe } from './pipes/date-text.pipe';
-import { SVAPaymentsComponent } from './views/sva-payments/sva-payments.component';
+import { PositionCurrencyAccountPipe } from './pipes/position-currency-account.pipe';
+import { SVAPaymentsSCAComponent } from './views/sva-payments/sva-payments-sca.component';
+import {SelectAccountsSVAComponent} from './views/sva-payments/select-account/select-account-sva.component';
 
 @NgModule({
   declarations: [
@@ -34,13 +36,15 @@ import { SVAPaymentsComponent } from './views/sva-payments/sva-payments.componen
     InputWithValidationComponent,
     LogoComponent,
     PaymentsSCAComponent,
-    SVAPaymentsComponent,
+    SVAPaymentsSCAComponent,
+    SelectAccountsSVAComponent,
     ConsentsSCAComponent,
     RegisterCodeComponent,
     SelectAccountComponent,
     InputWithValidTitleAndLinkComponent,
     HideCenterAccountPipe,
-    DateTextPipe
+    DateTextPipe,
+    PositionCurrencyAccountPipe
   ],
   imports: [
     BrowserModule,

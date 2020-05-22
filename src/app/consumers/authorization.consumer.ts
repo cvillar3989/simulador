@@ -10,6 +10,8 @@ import { OTPRequest } from '../models/otp-request';
 import { OTPResponse } from '../models/otp-response';
 import { ConcentsResponse } from '../models/consents-response';
 import { AccessRequest } from '../models/access-request';
+import { AccountsResponse } from '../models/accounts-response';
+import { AccountResponse} from '../models/account-response';
 
 @Injectable()
 export class AuthorizationConsumer {
@@ -25,6 +27,16 @@ export class AuthorizationConsumer {
 
   authenticate(login: LoginRequest): Observable<LoginResponse> {
     return this.http.post<LoginResponse>(environment.endpointAuth, { user: login.userName, password: login.password });
+  }
+
+  getAccountsSVAPaymentsSCA(aspspSession: string): Observable<AccountsResponse> {
+    const headers = this.getHeaders(aspspSession);
+    return this.http.get<AccountsResponse>(environment.endpoints.getSVAPaymentsAccounts, {headers});
+  }
+
+  sendIdAccountSVAPaymentSCA(accountsResponse: AccountResponse, aspspSession: string): Observable<any>{
+    const headers = this.getHeaders(aspspSession);
+    return this.http.put(environment.endpoints.putSVAPaymentsSCA, accountsResponse, {headers});
   }
 
   getInfoInitPaymentsSCAAuth(aspspSession: string): Observable<InformationByConfirmationPaymentsSCA> {

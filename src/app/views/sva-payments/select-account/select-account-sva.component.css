@@ -1,0 +1,44 @@
+mat-card {
+    width: 246px;
+    height: 60px;
+    border-radius: 0px;
+}
+mat-grid-list{
+    width: 580px;
+    margin-bottom: 20px;
+}
+
+.mat-card:not([class*=mat-elevation-z]) {
+    box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 0px 7px 0 rgba(0,0,0,.14), 0 0px 0px 0 rgba(0,0,0,.12);
+}
+
+a {
+    margin-top: 0px;
+    font-weight: bold;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    margin-bottom: 20px;
+}
+
+mat-icon {
+    font-size: 22px;
+}
+
+.font {
+    font-family: Bankinter Sans;
+    font-size: 14px;
+    color: #5c6780;
+  }
+
+.div {
+    font-family: Bankinter Sans;
+    font-size: 16px;
+    color: #5c6780;
+}
+
+.value{
+    font-weight: bold;
+    color: #5c6780;
+}
+
+.mat

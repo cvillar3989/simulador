@@ -7,11 +7,11 @@ import { PaymentSCARequest } from 'src/app/models/payment-sca-request';
 import { QueryParamsPaymentCSAResponse } from 'src/app/models/query-params-payment-sca-response';
 
 @Component({
-  selector: 'app-sva-payments',
-  templateUrl: './sva-payments.component.html',
-  styleUrls: ['./sva-payments.component.css']
+  selector: 'app-payments-sca',
+  templateUrl: './sva-payments-sca.component.html',
+  styleUrls: ['./sva-payments-sca.component.css']
 })
-export class SVAPaymentsComponent implements OnInit {
+export class SVAPaymentsSCAComponent implements OnInit {
 
   paymentsFormGroup: FormGroup;
   codeFormControl: FormControl;
@@ -30,14 +30,14 @@ export class SVAPaymentsComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log("PaymentsSCAComponent");
+    console.log("SVAPaymentsSCAComponent");
     this.route.queryParams
       .subscribe(params => {
         this.aspspSession = params.aspspSession;
         this.service.getInfoInitPaymentsSCAAuth(this.aspspSession)
           .subscribe((informationByConfirmationPaymentsSCAResult: InformationByConfirmationPaymentsSCA) => {
             this.informationByConfirmationPaymentsSCA = informationByConfirmationPaymentsSCAResult;
-          },
+           },
             (error: any) => { });
       });
   }

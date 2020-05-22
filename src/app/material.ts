@@ -1,4 +1,5 @@
 import {
+  MatRadioModule,
   MatButtonModule,
   MatCheckboxModule,
   MatTabsModule,
@@ -26,6 +27,7 @@ import { NgModule } from '@angular/core';
 
 @NgModule({
   imports: [
+    MatRadioModule,
     MatButtonModule,
     MatCheckboxModule,
     MatTabsModule,
@@ -49,6 +51,7 @@ import { NgModule } from '@angular/core';
     MatGridListModule
   ],
   exports: [
+    MatRadioModule,
     MatButtonModule,
     MatCheckboxModule,
     MatTabsModule,

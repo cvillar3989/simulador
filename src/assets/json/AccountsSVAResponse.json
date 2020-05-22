@@ -1,0 +1,28 @@
+{
+    "accounts": [
+        {
+            "resourceId": "3dc3d5b3-7023-4848-9853-f5400a64e80f",
+            "iban": "ES7601283210170100000023",
+            "currency": "EUR",
+            "product": "Girokonto",
+            "cashAccountType": "CACC",
+            "name": "Main Account 1"
+        },
+        {
+            "resourceId": "3dc3d5b3-7023-4848-9853-f5400a64e81f",
+            "iban": "ES1001280001690107550416",
+            "currency": "EUR",
+            "product": "Girokonto",
+            "cashAccountType": "CACC",
+            "name": "Main Account 2"
+        },
+        {
+            "resourceId": "3dc3d5b3-7023-4848-9853-f5400a64e81f",
+            "iban": "ES1234580001690107456786",
+            "currency": "EUR",
+            "product": "Girokonto",
+            "cashAccountType": "CACC",
+            "name": "Main Account 3"
+        }
+    ]
+ }

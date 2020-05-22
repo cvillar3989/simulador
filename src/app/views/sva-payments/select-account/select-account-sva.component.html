@@ -1,0 +1,28 @@
+<form id="select-accounts-form" [formGroup]="selectAccountFormGroup" (ngSubmit)="sendAccount()" class="font">
+     <div  class="title; div">
+                <label>Por favor selecciona la cuenta desde la que realizar el pago:</label>
+        </div> 
+        <br>
+        <mat-grid-list cols="2" rowHeight="100px">
+            <mat-grid-tile *ngFor="let accounts of accountsResponse.accounts">
+                    <mat-card>
+                        <mat-radio-button (change)="onClickCheckBox(accounts)"  [value]="accounts">
+                            <table>
+                                <tr>
+                                    <td>{{accounts.iban}}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="value">{{accounts.name}}
+                                    </td>
+                                </tr>
+                            </table>
+                        </mat-radio-button>
+                    </mat-card>
+           </mat-grid-tile>
+        </mat-grid-list>
+        <div class="title; value">
+                <label>Estos credenciales no se compartiran con tu proveedor de servicios de agregacion de cuentas</label>
+        </div>
+        <app-button-bar-cancel-and-continue [formGroup]="selectAccountFormGroup"></app-button-bar-cancel-and-continue>
+</form> 

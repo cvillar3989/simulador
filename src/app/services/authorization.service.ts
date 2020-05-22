@@ -13,6 +13,8 @@ import { OTPRequest } from '../models/otp-request';
 import { OTPResponse } from '../models/otp-response';
 import { ConcentsResponse } from '../models/consents-response';
 import { AccessRequest } from '../models/access-request';
+import { AccountsResponse } from '../models/accounts-response';
+import { AccountResponse} from '../models/account-response';
 
 @Injectable()
 export class AuthorizationService {
@@ -60,6 +62,14 @@ export class AuthorizationService {
     return this.consumer.getInfoInitPaymentsSCAAuth(aspspSession);
   }
 
+  getAccountsSVAPaymentsSCA(aspspSession: string): Observable<AccountsResponse> {
+    return this.consumer.getAccountsSVAPaymentsSCA(aspspSession);
+  }
+
+  sendIdAccountSVAPaymentSCA(accountsResponse: AccountResponse, aspspSession: string):Observable<any> {
+    return this.consumer.sendIdAccountSVAPaymentSCA(accountsResponse, aspspSession);
+  }
+  
   private getRedirectUrlWithParamsPaymentSCA(queryParamsPaymentCSAResponse: QueryParamsPaymentCSAResponse): string {
     let url = this.getRedirectUrlSCA();
     let queryParams = `?aspspSession=${queryParamsPaymentCSAResponse.aspspSession}&result=${queryParamsPaymentCSAResponse.result}`;

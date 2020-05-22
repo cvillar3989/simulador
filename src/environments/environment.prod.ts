@@ -7,6 +7,8 @@ export const environment = {
   contextApp: '',
   nrbe: nrbe,
   endpoints: {
+    getSVAPaymentsAccounts: `https://hub-i.redsys.es:16443/asp-sim-sb/services/rest/mock-ups/sca/${nrbe}/users/accounts`,
+    putSVAPaymentsSCA: `https://hub-i.redsys.es:16443/asp-sim-sb/services/rest/mock-ups/sca/${nrbe}/payments`,
     getPaymentsSCA: `https://hub-i.redsys.es:16443/asp-sim-sb/services/rest/mock-ups/sca/${nrbe}/payments`,
     putPaymentsSCA: `https://hub-i.redsys.es:16443/asp-sim-sb/services/rest/mock-ups/sca/${nrbe}/payments`,
     getConsentsSCAAccounts: `https://hub-i.redsys.es:16443/asp-sim-sb/services/rest/mock-ups/sca/${nrbe}/consents`,

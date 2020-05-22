@@ -7,9 +7,13 @@ export const environment = {
   redirectUrlSCA: 'https://hub-i.redsys.es:16443/asp-sim-sb/services/rest/mock-ups/sca/callback',
   redirectURL: 'https://hub-i.redsys.es:16443/asp-sim-sb/services/rest/mock-ups/authorization/callback',
   endpointAuth: 'https://hub-i.redsys.es:16443/asp-sim-sb/services/rest/mock-ups/authorization/login',
+  redirectSVAURL: 'https://hub-i.redsys.es:16443/asp-sim-sb/services/rest/mock-ups/authorization/callback',
   contextApp: '',
   nrbe: nrbe,
   endpoints: { 
+    getSVAPaymentsAccounts: `assets/json/AccountsSVAResponse.json`,
+    putSVAPaymentsSCA: `https://hub-i.redsys.es:16443/asp-sim-sb/services/rest/mock-ups/sca/${nrbe}/payments`,
+    //getSVAPaymentsAccounts: `https://hub-i.redsys.es:16443/asp-sim-sb/services/rest/mock-ups/sca/${nrbe}/users/accounts`
     getPaymentsSCA: `assets/json/InformationByConfirmationPaymentsSCAResponse.json`,
     //getPaymentsSCA: `https://hub-i.redsys.es:16443/asp-sim-sb/services/rest/mock-ups/sca/${nrbe}/payments`
     putPaymentsSCA: `https://hub-i.redsys.es:16443/asp-sim-sb/services/rest/mock-ups/sca/${nrbe}/payments`,
