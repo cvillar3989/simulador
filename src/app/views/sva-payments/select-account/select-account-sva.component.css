@@ -40,5 +40,6 @@ mat-icon {
     font-weight: bold;
     color: #5c6780;
 }
-
-.mat
+mat-radio-button {
+    color: #5c6780;
+}
