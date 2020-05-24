@@ -2,11 +2,6 @@ mat-form-field {
     width: 35%;
     max-width: 262px;
     color: #68707E;
-    font-size: 40px;
-}
-
-.mat-form-field-outline  {
-    height: 80px;
 }
 
 .msn-error {

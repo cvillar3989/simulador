@@ -1,17 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { AuthorizationService } from 'src/app/services/authorization.service';
 import { InformationByConfirmationPaymentsSCA } from 'src/app/models/Information-by-confirmation-payments-sca-response';
 import { PaymentSCARequest } from 'src/app/models/payment-sca-request';
 import { QueryParamsPaymentCSAResponse } from 'src/app/models/query-params-payment-sca-response';
-
+import { SelectAccountsSVAComponent } from './select-account/select-account-sva.component';
 @Component({
   selector: 'app-payments-sca',
   templateUrl: './sva-payments-sca.component.html',
   styleUrls: ['./sva-payments-sca.component.css']
 })
-export class SVAPaymentsSCAComponent implements OnInit {
+export class SVAPaymentsSCAComponent implements OnInit{
 
   paymentsFormGroup: FormGroup;
   codeFormControl: FormControl;
@@ -53,6 +53,7 @@ export class SVAPaymentsSCAComponent implements OnInit {
       this.service.redirectSCA(queryParamsPaymentCSAResponse);
     },
       (error: any) => { });
+      
   }
 
   onClickEnlaceInput(event: any) {

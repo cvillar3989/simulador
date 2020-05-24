@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: `${environment.contextApp}payments/sca.html`, component: PaymentsSCAComponent, },
   { path: `${environment.contextApp}sca.html`, component: PaymentsSCAComponent, }
   { path: `${environment.contextApp}sca.html`, component: SVAPaymentsComponent, }*/
-  { path: `${environment.contextApp}sca.html`, component: SelectAccountsSVAComponent,}
+  { path: `${environment.contextApp}sca.html`, component: SVAPaymentsSCAComponent,}
   /*{ 
     path: `${environment.contextApp}consents`, 
     component: ConsentsSCAComponent,
