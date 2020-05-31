@@ -34,9 +34,9 @@ export class AuthorizationConsumer {
     return this.http.get<AccountsResponse>(environment.endpoints.getSVAPaymentsAccounts, {headers});
   }
 
-  sendIdAccountSVAPaymentSCA(accountsResponse: AccountResponse, aspspSession: string): Observable<any>{
+  sendIdAccountSVAPaymentSCA(accountId: string, aspspSession: string): Observable<any>{
     const headers = this.getHeaders(aspspSession);
-    return this.http.put(environment.endpoints.putSVAPaymentsSCA, accountsResponse, {headers});
+    return this.http.put(environment.endpoints.putSVAPaymentsSCA, accountId, {headers});
   }
 
   getInfoInitPaymentsSCAAuth(aspspSession: string): Observable<InformationByConfirmationPaymentsSCA> {

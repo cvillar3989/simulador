@@ -66,8 +66,8 @@ export class AuthorizationService {
     return this.consumer.getAccountsSVAPaymentsSCA(aspspSession);
   }
 
-  sendIdAccountSVAPaymentSCA(accountsResponse: AccountResponse, aspspSession: string):Observable<any> {
-    return this.consumer.sendIdAccountSVAPaymentSCA(accountsResponse, aspspSession);
+  sendIdAccountSVAPaymentSCA(accountId: string, aspspSession: string):Observable<any> {
+    return this.consumer.sendIdAccountSVAPaymentSCA(accountId , aspspSession);
   }
   
   private getRedirectUrlWithParamsPaymentSCA(queryParamsPaymentCSAResponse: QueryParamsPaymentCSAResponse): string {
