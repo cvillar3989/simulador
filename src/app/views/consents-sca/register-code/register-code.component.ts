@@ -39,6 +39,8 @@ export class RegisterCodeComponent implements OnInit {
       return {otpResponse: otpResponse};
     })).subscribe((otpResponse: any) => {
         if (otpResponse.otpResponse.result) {
+          console.log("validCode-consents");
+          console.log("path: "+`${environment.contextApp}/consents/sca2.html`+", component: "+otpResponse);
           this.router.navigate([`${environment.contextApp}/consents/sca2.html`], otpResponse);
         }
       },

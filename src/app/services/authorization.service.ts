@@ -15,6 +15,7 @@ import { ConcentsResponse } from '../models/consents-response';
 import { AccessRequest } from '../models/access-request';
 import { AccountsResponse } from '../models/accounts-response';
 import { AccountResponse} from '../models/account-response';
+import { Account} from '../views/sva-payments/select-account/models/account';
 
 @Injectable()
 export class AuthorizationService {
@@ -66,8 +67,8 @@ export class AuthorizationService {
     return this.consumer.getAccountsSVAPaymentsSCA(aspspSession);
   }
 
-  sendIdAccountSVAPaymentSCA(accountId: string, aspspSession: string):Observable<any> {
-    return this.consumer.sendIdAccountSVAPaymentSCA(accountId , aspspSession);
+  sendIdAccountSVAPaymentSCA(account: Account, aspspSession: string):Observable<any> {
+    return this.consumer.sendIdAccountSVAPaymentSCA(account , aspspSession);
   }
   
   private getRedirectUrlWithParamsPaymentSCA(queryParamsPaymentCSAResponse: QueryParamsPaymentCSAResponse): string {

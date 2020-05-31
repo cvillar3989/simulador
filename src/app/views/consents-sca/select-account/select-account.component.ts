@@ -80,8 +80,10 @@ export class SelectAccountComponent implements OnInit {
 
   ngOnInit() {
     if (this.redirectToRegisterOTP) {
+      console.log("ngOnInit()-accounts-consents-redirectToRegisterOTP");
       this.router.navigate([`${environment.contextApp}consents/sca.html`]);
     } else {
+      console.log("ngOnInit()-accounts-consents");
       this.service.findAllAccounts(this.otpResponse.aspspSession)
         .pipe(map(this.converterToConsent))
         .subscribe((consentResult: Consent) => {

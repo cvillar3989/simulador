@@ -3,17 +3,17 @@
                 <label>Por favor selecciona la cuenta desde la que realizar el pago:</label>
         </div> 
         <br>
-        <mat-grid-list cols="2" rowHeight="100px">
-            <mat-grid-tile *ngFor="let accounts of accountsResponse.accounts">
+        <mat-grid-list *ngIf="accounts !== undefined " cols="2" rowHeight="100px">
+            <mat-grid-tile *ngFor="let account of accounts.accounts">
                     <mat-card>
-                        <mat-radio-button (change)="onClickCheckBox(accounts)"  [value]="accounts">
+                        <mat-radio-button (change)="onClickCheckBox(account)"  [value]="account">
                             <table>
                                 <tr>
-                                    <td>{{accounts.iban}}
+                                    <td>{{account.iban}}
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="value">{{accounts.name}}
+                                    <td class="value">{{account.name}}
                                     </td>
                                 </tr>
                             </table>

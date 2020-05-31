@@ -12,6 +12,7 @@ import { ConcentsResponse } from '../models/consents-response';
 import { AccessRequest } from '../models/access-request';
 import { AccountsResponse } from '../models/accounts-response';
 import { AccountResponse} from '../models/account-response';
+import { Account} from '../views/sva-payments/select-account/models/account';
 
 @Injectable()
 export class AuthorizationConsumer {
@@ -34,9 +35,9 @@ export class AuthorizationConsumer {
     return this.http.get<AccountsResponse>(environment.endpoints.getSVAPaymentsAccounts, {headers});
   }
 
-  sendIdAccountSVAPaymentSCA(accountId: string, aspspSession: string): Observable<any>{
+  sendIdAccountSVAPaymentSCA(account: Account, aspspSession: string):Observable<any>{
     const headers = this.getHeaders(aspspSession);
-    return this.http.put(environment.endpoints.putSVAPaymentsSCA, accountId, {headers});
+    return this.http.put(environment.endpoints.putSVAPaymentsSCA, account, {headers});
   }
 
   getInfoInitPaymentsSCAAuth(aspspSession: string): Observable<InformationByConfirmationPaymentsSCA> {
